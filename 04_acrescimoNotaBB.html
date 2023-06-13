@@ -1,12 +1,20 @@
 <meta charset="UTF-8" />
 <script>
-    // Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
+    // Um professor instituiu o programa BBB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
 
     // entrada
-
-    
+    const lb = Number(prompt('Informe a nota do aluno antes da ajuda:').replace(',','.'));
+    const depoislb = Number(prompt('Informe a nota depois da ajuda:').replace(',','.'));
+    const notabb = Number(prompt('Informe a nota da pessoa que ajudou:').replace(',','.'));
     // processamento
-
+    const a = depoislb - lb
+    const nota = Math.ceil((a * 0.25) + notabb)
+    if(nota >> 0){
+        alert(`O "Big Brother" terá a nota final igual a ${nota.toFixed(2).replace('.',',')} com o acréscimo.`)
+    }
+    else{
+        alert('nenhum acréscimo será dado')
+    }
     
     // saída
 

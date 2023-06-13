@@ -5,10 +5,30 @@
     */
 
     //ENTRADA
-
-    
+    const um = Number(prompt('Informe um número'));
+    const dois = Number(prompt('Informe um número'));
+    const tres = Number(prompt('Informe um número'));
     //PROCESSAMENTO
-    
+   
+    if (um >= dois && um >= tres) {
+    if (dois >= tres) {
+        alert(um + ", " + dois + ", " + tres);
+    } else {
+        alert(um + ", " + tres + ", " + dois);
+    }
+    } else if (dois >= um && dois >= tres) {
+    if (um >= tres) {
+        alert(dois + ", " + um + ", " + tres);
+    } else {
+        alert(dois + ", " + tres + ", " + um);
+    }
+    } else {
+    if (um >= dois) {
+        alert(tres + ", " + um + ", " + dois);
+    } else {
+        alert(tres + ", " + dois + ", " + um);
+    }
+    }
     //SAÍDA
     
 </script>
