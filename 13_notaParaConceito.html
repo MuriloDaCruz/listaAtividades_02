@@ -9,11 +9,27 @@
     // Entre 5.9 e zero            E
 
     // Entrada
-
+    const notas = Number(prompt('Informe a sua nota.').replace(',','.'))
     
     // Processamento
-
-    
+    if( notas >= 9 && notas <= 10){
+        alert('Sua nota em conceito seria A')
+    }
+    else if( notas >= 8 && notas <= 8.9){
+        alert('Sua nota em conceito seria B').replace('.',',')
+    }
+    else if( notas >= 7 && notas <= 7.9){
+        alert('Sua nota em conceito seria C')
+    }
+    else if( notas >= 6 && notas <= 6.9){
+        alert('Sua nota em conceito seria D')
+    }
+    else if( notas >= 0 && notas <= 5.9){
+        alert('Sua nota em conceito seria E')
+    }
+    else{
+        alert('Valores Invalidos')
+    }
     // Saída
 
 </script>
