@@ -19,6 +19,45 @@
 
     //PROCESSAMENTO
     
+    var respostasPositivas = 0;
+
+    if (tel === "sim") {
+        respostasPositivas++;
+    }
+
+    if (local === "sim") {
+        respostasPositivas++;
+    }
+
+    if (mora === "sim") {
+        respostasPositivas++;
+    }
+
+    if (deve === "sim") {
+        respostasPositivas++;
+    }
+
+    if (job === "sim") {
+        respostasPositivas++;
+    }
+
+    var classificacao;
+
+    if (respostasPositivas === 5) {
+        classificacao = "Assassino";
+    } else if (respostasPositivas >= 3 && respostasPositivas <= 4) {
+        classificacao = "Cúmplice";
+    } else if (respostasPositivas === 2) {
+        classificacao = "Suspeita";
+    } else {
+        classificacao = "Inocente";
+    }
+
+    //SAÍDA
+    alert("Classificação: " + classificacao);
+
+  
+
     //SAÍDA
 
 </script>
