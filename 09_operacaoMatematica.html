@@ -9,27 +9,27 @@
 
     //ENTRADA
     const num = Number(prompt(`Informe o primeiro valor`).trim().replace(",", "."));
-    const num1 = Number(prompt(`Informe o segundo valor`).trim().replace(",", "."));
+    const num2 = Number(prompt(`Informe o segundo valor`).trim().replace(",", "."));
     const operacao = prompt(`Informe a operação desejada. (Informe com * para multiplicação, / para divisão, + para adição e - para subtração)`).trim()
-    let resultado = 0;
+    let resultado;
 
     //PROCESSAMENTO
     if (operacao == "*") {
-        resultado = num * num1;
+        resultado = num * num2;
     }
     else if (operacao == "/") {
-        resultado = num / num1;
+        resultado = num / num2;
     }
     else if (operacao == "+") {
-        resultado = num + num1;
+        resultado = num + num2;
     }
     else if (operacao == "-") {
-        resultado = num - num1;
+        resultado = num - num2;
     }
-    else {replace(".",".")
+    else {
         alert(`Operação inválida`)
     }
-
+    
     if (resultado % 2 == 0 && resultado >= 0 && Number.isInteger(resultado)) {
         alert(`${resultado} ele é par, positivo e inteiro`)
     }

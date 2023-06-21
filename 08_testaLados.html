@@ -4,21 +4,23 @@
 
     //Entrada
 
-    const lado1 = Number(prompt("Digite o primeiro lado: "));
-    const lado2 = Number(prompt("Digite o segundo lado: "));
-    const lado3 = Number(prompt("Digite o terceiro lado: "));
+    const lado1 = Number(prompt("Digite o primeiro lado: ").trim().replace(",","."));
+    const lado2 = Number(prompt("Digite o segundo lado: ").trim().replace(",","."));
+    const lado3 = Number(prompt("Digite o terceiro lado: ").trim().replace(",","."));
 
     //Processamento
     if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
-    
-     if (lado1 === lado2 && lado2 === lado3) {
-          alert("Os lados formam um triângulo equilátero.");
-    } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-            alert("Os lados formam um triângulo isósceles.");
-     } else {
-            alert("Os lados formam um triângulo escaleno.");
+        if (lado1 === lado2 && lado2 === lado3) {
+          alert("Os lados formam um triângulo Equilátero.");
+    }
+    else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+            alert("Os lados formam um triângulo Isósceles.");
+    }
+    else {
+            alert("Os lados formam um triângulo Escaleno.");
         }
-    } else {
+    }
+    else {
         alert("Os lados não podem formar um triângulo.");
     }
 
